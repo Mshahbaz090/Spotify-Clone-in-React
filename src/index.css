@@ -1,13 +1,121 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-image: linear-gradient(0deg, rgba(195, 126, 34, 1)0%, rgba(234, 253, 45, 0.5)100%);
 }
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.player {
+  display: block;
+  background-image: linear-gradient(to bottom, violet, indigo);
+  margin: 0px auto;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: inset -6px -6px 12px rgba(0, 0, 0, 0.8), inset 6px 6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.player {
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+.player>p {
+  color: #aaa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.details .details_img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.details .details_img img {
+  display: block;
+  margin: 50px auto;
+  object-fit: contain;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 50%;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.details .details_img:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  bottom: -25px;
+  right: -25px;
+  border-radius: 50%;
+  border: 3px dashed rgba(234, 255,0);
+  
+}
+
+.details .details_title{
+  color: #eee;
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.details .details_artist{
+  color: #aaa;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.control{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.control .control_PlayButton{
+  display: flex;
+  margin: 0 30px;
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  background-color: #ffce00;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+.control .control_SkipBtn{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #000;
+  font-size: 18px;
+
+}
+
+ audio{
+  
+  outline-width: 0;
+  margin-bottom: 5px;
+  margin-top: -25px;
+}
+
+/* audio::-webkit-media-controls-play-button{
+  display: none;
+}  */
